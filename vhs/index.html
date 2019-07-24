@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+a{
+	color: white;
+	font-size: small;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video loop id="myVideo">
+  <source src="https://gcs-vimeo.akamaized.net/exp=1563969516~acl=%2A%2F1232944289.mp4%2A~hmac=21e33610d8d29642987d428bead2e512cd5173f811e08ef669e628704ecdd79a/vimeo-prod-skyfire-std-us/01/3639/12/318199461/1232944289.mp4" type="video/mp4">
+ 
+</video>
+
+<div class="content">
+  <h1>moniamati VHS 📼</h1>
+  <p>👰🤵💒 Dziękujemy za obecnośc. <a href="https://vimeo.com/318199461/a662ca5291" target="_blank">Coś nie działa? zobacz klip na vimeo</a></p>
+  <button id="myBtn" onclick="myFunction()">Odtwórz</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Zatrzymaj";
+  } else {
+    video.pause();
+    btn.innerHTML = "Odtwórz";
+  }
+}
+</script>
+
+</body>
+</html>
