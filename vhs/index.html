@@ -76,7 +76,17 @@ function playPause() {
 }
 
 function fullScreen() {
-	video.requestFullscreen();
+        if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen(); // Firefox
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen(); // Chrome and Safari
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen(); // IE
+            }
+		}
 }
 </script>
 
