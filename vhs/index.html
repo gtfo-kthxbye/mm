@@ -36,32 +36,49 @@ a{
 }
 
 #myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
+  font-size: 36px;
+  padding: 0px;
   border: none;
-  background: #000;
-  color: #fff;
+  background: rgba(255, 255, 255, 0);
   cursor: pointer;
   outline: none;
-}
-
-#myBtn:hover {
-  background: #ddd;
-  color: black;
 }
 </style>
 </head>
 <body>
 
-<video controls autoplay loop id="myVideo">
+<video loop id="myVideo">
   <source src="https://gcs-vimeo.akamaized.net/exp=1563969516~acl=%2A%2F1232944289.mp4%2A~hmac=21e33610d8d29642987d428bead2e512cd5173f811e08ef669e628704ecdd79a/vimeo-prod-skyfire-std-us/01/3639/12/318199461/1232944289.mp4" type="video/mp4">
  
 </video>
 
 <div class="content">
-  <strong>moniamati VHS 📼</strong><br/> 👰🤵💒 Dziękujemy za obecnośc. <a href="https://vimeo.com/318199461/a662ca5291" target="_blank">Coś nie działa? zobacz klip na vimeo</a>
+  <strong>moniamati.vhs 📼👰🤵</strong>
+  <br/>
+   Dziękujemy za obecnośc. <a href="https://vimeo.com/318199461/a662ca5291" target="_blank">Coś nie działa? zobacz klip na vimeo</a>
+   <br/> 
+  <button id="myBtn" title="pauza/odtwórz" onclick="playPause()">▶️</button>
+  <button id="myBtn" title="fullscreen" onclick="fullScreen()">🎦</button>
 </div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function playPause() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "⏸️";
+  } else {
+    video.pause();
+    btn.innerHTML = "▶️";
+  }
+}
+
+function fullScreen() {
+	video.requestFullscreen();
+}
+</script>
 
 </body>
 </html>
