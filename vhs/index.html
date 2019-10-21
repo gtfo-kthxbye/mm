@@ -60,12 +60,13 @@ a{
 }
 
 #myBtn {
-  font-size: 36px;
+  font-size: 16px;
   padding: 0px;
   border: none;
   background: rgba(255, 255, 255, 0);
   cursor: pointer;
   outline: none;
+  color: white;
 }
 </style>
 </head>
@@ -79,8 +80,8 @@ a{
 <div class="content">
   <strong>moniamati.vhs 📼👰🤵</strong> Dziękujemy za obecność.
    <br/> 
-  <button id="myBtn" title="pauza/odtwórz" onclick="playPause()">▶️</button>
-  <button id="myBtn" title="fullscreen" onclick="fullScreen()">🎦</button>
+  <button id="myBtn" title="pauza/odtwórz" onclick="playPause()">odtwórz</button> | 
+  <button id="myBtn" title="fullscreen" onclick="fullScreen()">pełny ekran</button>
 </div>
 
 <script>
@@ -91,10 +92,10 @@ var btn = document.getElementById("myBtn");
 function playPause() {
   if (video.paused) {
     video.play();
-    btn.innerHTML = "⏸️";
+    btn.innerHTML = "zatrzymaj️";
   } else {
     video.pause();
-    btn.innerHTML = "▶️";
+    btn.innerHTML = "odtwórz";
   }
 }
 
