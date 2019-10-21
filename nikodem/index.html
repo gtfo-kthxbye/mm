@@ -86,12 +86,13 @@ background-color: #ffffffbd;
   <source loop src="http://serwer1837204.home.pl/files/vhs/20190907_075352.mp4" type="video/mp4">
 </video>
 <div class="d-block d-md-none bkg"></div>
+
 <div class="jumbotron jumbotron-fluid jumbotron-custom">
   <div class="container">
     <h1 class="display-4">Chrzest Święty</h1>
     <p class="lead">Serdecznie zapraszamy na uroczystość Chrztu Świętego naszego syna <strong>Nikodema</strong>, która odbędzie się dnia 📅 10.11.2019 o godz. ⌚12:00 w <a href="https://www.google.com/maps/place/Kościół+Rzymskokatolicki+pw+Ducha+Świętego/@53.1313626,23.19341,17z/data=!3m1!4b1!4m5!3m4!1s0x471ffebc6ee87c4b:0x8f1a515ca627d790!8m2!3d53.1313594!4d23.1955987" target="_blank">📌 Parafii Ducha Świętego</a>, (Białystok, ul. Sybiraków 2). Po uroczystości, zapraszamy na wspólny obiad do <a href="https://www.google.com/maps/place/Maj%C4%85tek+Howieny+-+Sale+Weselne,+Imprezy+Firmowe,+Atrakcje,+Mini+Zoo,+Stodo%C5%82a+Na+Wesele,+Bia%C5%82ystok/@53.034155,23.092478,15z/data=!4m5!3m4!1s0x0:0x74e68883f541d493!8m2!3d53.034155!4d23.092478" target="_blank">📌 Majątku Howieny</a>, (Pomigacze).<br/>
 	<br/>
-	<a>Pozdrawiamy. Monika, Mateusz i <span onclick="fullScreen()">📼 <em>Nikodem</em></span></p>
+	<a>Pozdrawiamy. Monika, Mateusz i <a href="#" onclick="fullScreen()">📼 Nikodem</a></p>
   </div>
 </div>  
 <script>
@@ -99,7 +100,8 @@ var video = document.getElementById("myVideo");
 video.play();
 
 function fullScreen() {
-        if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {
+        video.style = "display:block !important";
+		if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {
             if (video.requestFullscreen) {
                 video.requestFullscreen();
             } else if (video.mozRequestFullScreen) {
