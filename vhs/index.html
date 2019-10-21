@@ -80,11 +80,12 @@ a{
   <strong>moniamati.vhs 📼👰🤵</strong> Dziękujemy za obecność.
    <br/> 
   <button id="myBtn" title="pauza/odtwórz" onclick="playPause()">▶️</button>
-  <button id="myBtn" title="fullscreen" onclick="fullScreen()">🍿</button>
+  <button id="myBtn" title="fullscreen" onclick="fullScreen()">🎦</button>
 </div>
 
 <script>
 var video = document.getElementById("myVideo");
+video.currentTime = 6;
 var btn = document.getElementById("myBtn");
 
 function playPause() {
